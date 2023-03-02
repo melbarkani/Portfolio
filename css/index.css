@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+/** Polices */
+@font-face {
+    font-family: 'Acrom';
+    src: url(../fonts/Acrom-Regular.ttf);
+}
+@font-face {
+    font-family: 'Acrom-Bold';
+    src: url(../fonts/Acrom\ Bold.ttf);
+}
+
+/** Corps du site web */
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), #11141eb9), url("/img/background-image.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Acrom';
+}
+
+/** Entête du site */ 
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+}
+/** Logo */
+.logo {
+    margin-left: 60px;
+}
+.logo h2 {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+.bottom-line {
+    position: absolute;
+    background-color: #a50928;
+    width: 50px;
+    height: 2px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: none;
+}
+/** Menu contacts */
+.contact {
+    margin-right: 30px;
+}
+.contact ul {
+    display: flex;
+    list-style: none;
+}
+.contact ul li {
+    display: block;
+}
+.contact ul li a {
+    margin-right: 30px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 15px;
+}
+/* menu hamburger (ouvrir menu) */
+#menu-i {
+    color: white;
+    position: absolute;
+    right: 60px;
+    font-size: 20px;
+    display: none;
+}
+/* Menu responsive */
+@media screen and (max-width: 770px) {
+    .contact ul li {
+        display: none;
+    }
+    #menu-i {
+        display: block;
+    }
+    #menu-i:hover {
+        cursor: pointer;
+    }
+}
+
+/* Menu responsive */
+.show-menu {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #11141E;
+    top: 0;
+    transform: translateY(-100%);
+}
+.show-menu ul {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+.show-menu ul li {
+    margin: 50px;
+}
+.show-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.show-menu ul li a:hover {
+    color: #a50928;
+    letter-spacing: 4px;
+    font-family: 'Acrom-Bold';
+}
+/* icon fermer menu */ 
+.show-menu i {
+    color: white;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.showMenu {
+    transform: translateY(0);
+}
+
+/* Icons de contact */
+.contact-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    bottom: 0;
+}
+.contact-icons i {
+    color: white;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+.line {
+    width: 1px;
+    height: 70px;
+    background-color: white;
+    margin-top: 10px;
+}
